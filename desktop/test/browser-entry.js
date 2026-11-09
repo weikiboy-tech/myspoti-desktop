@@ -5,7 +5,7 @@ import { createRoot } from 'react-dom/client';
 window.testCalls = [];
 const listeners = new Map();
 let position = 12000, playing = false, repeat = 0, shuffle = false, volume = .5;
-window.Spicetify = { React, Platform: { History: { push: path => window.testCalls.push(['navigate', path]) } }, Player: {
+window.Spicetify = { React, Menu: { Item: class { register() {} deregister() {} } }, Platform: { History: { push: path => window.testCalls.push(['navigate', path]) } }, Player: {
   data: { item: { uri: 'spotify:track:test', name: 'Lokaler Integrationstest', metadata: { artist_name: 'Testdaten · keine Spotify-Verbindung', album_title: 'Testalbum' } }, restrictions: { canResume: true, canPause: true, canSeek: true, canSkipNext: true, canSkipPrevious: true, canToggleShuffle: true, canToggleRepeatContext: true, canToggleRepeatTrack: true } },
   getDuration: () => 180000, getProgress: () => position, isPlaying: () => playing,
   getVolume: () => volume, getRepeat: () => repeat, getShuffle: () => shuffle,

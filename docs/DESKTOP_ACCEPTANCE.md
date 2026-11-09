@@ -18,6 +18,6 @@ Bei einem Fehler: konkrete Aktion und beobachtetes Verhalten festhalten; Funktio
 
 ## Desktop-Name und Veröffentlichung
 
-Myspoti-Verknüpfungen mit dem ursprünglichen Myspoti-Logo wurden auf Windows-Desktop und im Startmenü erstellt. Name/Argumente/Icon-Pfad wurden aus den erzeugten Verknüpfungen zurückgelesen. Der Direktstart ist noch in Prüfung: Ein Versuch zeigte die native Startseite; nach einer Korrektur wartet das Hintergrundskript auf die Navigation und öffnet Myspoti einmal pro Clientstart. Noch keine Freigabe als stabiler Launcher.
+Myspoti-Verknüpfungen mit dem ursprünglichen Myspoti-Logo wurden auf Windows-Desktop und im Startmenü erstellt. Name/Argumente/Icon-Pfad wurden aus den erzeugten Verknüpfungen zurückgelesen. Der erste Direktstart zeigte die native Startseite. Nach der Korrektur wartet das Hintergrundskript auf die Navigation und öffnet Myspoti einmal pro Clientstart. Erneuter Start über Myspoti.lnk erfolgreich: Im echten Client wurden der Myspoti-Eintrag, die Überschrift Myspoti und der Immersive-Umschalter nachgewiesen. Langzeit-/Update-Stabilität bleibt offen.
 
 Lokale Anmeldung bleibt auf ausdrücklichen Nutzerwunsch bestehen. Die neuen/angepassten Textdateien wurden vor Veröffentlichung auf konkrete lokale Konto-/Benutzernamen und typische Credential-Muster geprüft; keine Treffer. Das ersetzt keine universelle Geheimnis-Erkennung. Veröffentlichungsumfang ist Git-Quellcode; lokale Spotify-Profile, Spicetify-Backups, vendor, node_modules und Live-Screenshots gehören nicht dazu.
