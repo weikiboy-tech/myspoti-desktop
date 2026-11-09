@@ -1,5 +1,5 @@
-name: Windows-Fehler melden
-description: Ein Problem mit Myspoti für Windows reproduzierbar beschreiben.
+name: Desktop-Fehler melden
+description: Ein Problem mit Myspoti für Windows oder Linux reproduzierbar beschreiben.
 body:
   - type: markdown
     attributes:
@@ -8,7 +8,7 @@ body:
     id: versions
     attributes:
       label: Versionen
-      description: Windows, Spotify, Spicetify und Myspoti-Commit angeben.
+      description: Betriebssystem/Distribution, Architektur, Spotify-Paketart und -Version, Spicetify und Myspoti-Commit angeben.
     validations:
       required: true
   - type: textarea

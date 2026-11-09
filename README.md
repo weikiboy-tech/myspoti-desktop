@@ -2,7 +2,7 @@
 <h1 align="center">Myspoti für Windows & Linux</h1>
 <p align="center">Deine Musik. Zwei Looks. Ein eigener Desktop-Einstieg.</p>
 <p align="center"><a href="https://github.com/weikiboy-tech/myspoti-desktop/releases/download/v0.2.0-preview.2/Myspoti-Setup.exe"><b>⬇ Windows-Installer herunterladen (.exe)</b></a><br><a href="https://github.com/weikiboy-tech/myspoti-desktop/releases/download/v0.2.0-preview.2/Myspoti-Linux-Setup.deb"><b>⬇ Linux-Installer herunterladen (.deb)</b></a><br><sub>Vorschau · Windows x64 / Linux x86_64 · <a href="docs/STATUS.md">Kompatibilität prüfen</a></sub></p>
-<p align="center"><a href="docs/INSTALL.md"><b>Installation</b></a> · <a href="docs/STATUS.md">Funktionen & Stand</a> · <a href="CONTRIBUTING.md">Mitentwickeln</a> · <a href="https://github.com/weikiboy-tech/myspoti-desktop/issues">Fehler melden</a></p>
+<p align="center"><a href="docs/INSTALL.md"><b>Windows installieren</b></a> · <a href="docs/INSTALL-LINUX.md"><b>Linux installieren</b></a> · <a href="docs/STATUS.md">Funktionen & Stand</a> · <a href="CONTRIBUTING.md">Mitentwickeln</a> · <a href="https://github.com/weikiboy-tech/myspoti-desktop/issues">Fehler melden</a></p>
 
 > **Entwicklungsversion.** Myspoti läuft derzeit als eigene Oberfläche im Spotify-Desktop-Client. Es ist noch keine unabhängige Musik-App. Setup-Downloads für Windows und Linux sind als experimentelle Vorschau verfügbar. Unterstützte Spotify-Versionen und Linux-Paketarten stehen in den Anleitungen.
 
