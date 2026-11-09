@@ -1,0 +1,20 @@
+name: Windows-Fehler melden
+description: Ein Problem mit Myspoti für Windows reproduzierbar beschreiben.
+body:
+  - type: markdown
+    attributes:
+      value: 'Bitte keine Tokens, Cookies, Kontoexporte oder ungeschwärzte persönlichen Daten anhängen.'
+  - type: textarea
+    id: versions
+    attributes:
+      label: Versionen
+      description: Windows, Spotify, Spicetify und Myspoti-Commit angeben.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Schritte zum Fehler
+      description: Was hast du gemacht, was erwartet und was ist tatsächlich passiert?
+    validations:
+      required: true

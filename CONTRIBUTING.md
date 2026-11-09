@@ -1,5 +1,23 @@
 # Contributing to Myspoti
 
+## Windows desktop development
+
+The active desktop implementation is in `desktop/`. Read [the desktop guide](desktop/README.md) and [current status](docs/STATUS.md) first. Node.js >=22 is required:
+
+```powershell
+cd desktop
+npm test
+npm run build
+```
+
+Browser tests additionally require `npm ci --ignore-scripts` and `MYSPOTI_TEST_BROWSER` pointing to an installed Chromium-family browser. Run `npm run test:browser`. This harness uses synthetic data; it does not prove live Spotify compatibility.
+
+Desktop changes run the Windows CI workflow. The original Android workflows are retained as inactive references under `docs/upstream/workflows/`. Original Android guidance follows below; see [the original README](README.android.md).
+
+Do not commit profiles, credentials, Spotify binaries, local backups or real-account screenshots. Preserve the upstream attribution and GPL notices. Keep partial implementations clearly marked; a visible button is not proof of functionality.
+
+## Android upstream
+
 Thanks for helping. Bug reports (with a diagnostic report from Settings), fixes and translations are all welcome.
 
 ## Build and test
