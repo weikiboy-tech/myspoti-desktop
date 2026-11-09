@@ -13,7 +13,7 @@
     "node": ">=22"
   },
   "devDependencies": {
-    "esbuild": "0.25.12",
+    "esbuild": "0.28.2",
     "playwright-core": "1.56.1",
     "react": "19.2.0",
     "react-dom": "19.2.0"
