@@ -26,7 +26,7 @@ Compose Multiplatform/JVM wäre für lokale Dateien, Rhino und AutoMix sinnvoll,
 
 ## Daten und Sicherheit
 
-Nur Darstellungseinstellungen werden unter `myspoti.desktop.v1` gespeichert; importierte Lyrics werden im Arbeitsspeicher an die Track-URI gebunden. Kein Netzwerkdienst, kein Dateisystem-/Prozesszugriff aus der Custom-App. Nur lokale, explizit ausgewählte LRC-Dateien bis 500 KB. React rendert Text ohne HTML-Injektion. Cover-URLs sind auf Spotify-CDN bzw. Spotify-Bild-URIs begrenzt. Fehleranzeigen enthalten keine rohen Host-Antworten.
+Nur Darstellungseinstellungen werden unter `myspoti.desktop.v1` gespeichert; importierte Lyrics werden im Arbeitsspeicher an die Track-URI gebunden. Kein eigener Netzwerkserver, kein Prozesszugriff aus der Custom-App. Lokale, explizit ausgewählte LRC-Dateien bis 500 KB werden per File-API gelesen. Der manuell ausgelöste LRCLIB-Abruf überträgt Titel, Künstler, Album und Dauer, ohne Credentials, mit Redirect-Verbot, Zeitlimit, begrenztem Sitzungscache und Retry-After-Beachtung. React rendert Text ohne HTML-Injektion. Cover-URLs sind auf Spotify-CDN bzw. Spotify-Bild-URIs begrenzt. Fehleranzeigen enthalten keine rohen Host-Antworten.
 
 ## Lizenz und Distribution
 
