@@ -31,7 +31,7 @@ for (const [group, names, features] of groups) {
   for (const feature of features.split(';')) {
     const excluded = group.startsWith('D10'), audio = group.startsWith('D3'), implemented = partial.has(feature) && !group.startsWith('D5');
     const status = excluded ? 'UNSUPPORTED' : audio ? 'BLOCKED' : implemented ? 'PARTIAL' : 'NOT_STARTED';
-    const implementation = implemented ? (group.startsWith('D4') ? 'Lokaler LRC-Import; kein Online-Provider' : 'desktop/src/app.js und core.js; siehe README zum Teilumfang') : 'Keine eigene Implementierung';
+    const implementation = implemented ? (group.startsWith('D4') ? 'Lokaler LRC-Import und manueller LRCLIB-Abruf; übrige Provider fehlen' : 'desktop/src/app.js und core.js; siehe README zum Teilumfang') : 'Keine eigene Implementierung';
     const original = /D6|D8|D9|D2|Classic/.test(group) ? 'Native Funktion ggf. wiederverwenden; genaue Verfügbarkeit im Konto noch nicht geprüft' : 'Keine Myspoti-Parität vorausgesetzt';
     const deps = audio ? 'JVM/ONNX; autorisierte PCM-Quelle und neuer Audiohost' : group.startsWith('D7') ? 'Rhino/JVM, isolierter Dienst, Manifest/Netzwerkschutz' : group.startsWith('D4') ? 'Player-Zeitachse, LRC; später lizenzierter Provider' : 'Spotify, Spicetify; Android-Abhängigkeiten im Quellindex';
     const limitation = excluded ? 'Vom Nutzer ausdrücklich ausgeschlossen; keine Umgehung' : audio ? 'Keine unterstützte Spotify-PCM-Verarbeitung nachgewiesen; lokaler Audiohost fehlt' : implemented ? 'Noch kein Live-Nachweis im Spotify-Client; Android-Parität unvollständig' : 'Portierung ausstehend; native Alternativen nicht als Erfolg gezählt';
