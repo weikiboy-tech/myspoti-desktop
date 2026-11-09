@@ -1,6 +1,7 @@
 <p align="center"><img src="docs/brand/myspoti-logo-256.png" width="88" alt="Myspoti"></p>
 <h1 align="center">Myspoti für Windows</h1>
 <p align="center">Deine Musik. Zwei Looks. Ein eigener Desktop-Einstieg.</p>
+<p align="center"><a href="https://github.com/weikiboy-tech/myspoti-desktop/releases/download/v0.1.0-preview.1/Myspoti-Setup.exe"><b>⬇ Windows-Installer herunterladen (.exe)</b></a><br><sub>Vorschau · Windows x64 · Spotify 1.3.8.620</sub></p>
 <p align="center"><a href="docs/INSTALL.md"><b>Installation</b></a> · <a href="docs/STATUS.md">Funktionen & Stand</a> · <a href="CONTRIBUTING.md">Mitentwickeln</a> · <a href="https://github.com/weikiboy-tech/myspoti-desktop/issues">Fehler melden</a></p>
 
 > **Entwicklungsversion.** Myspoti läuft derzeit als eigene Oberfläche im Spotify-Desktop-Client. Es ist noch keine unabhängige Musik-App. Eine kleine Setup-EXE ist als experimentelle Vorschau verfügbar (Windows x64, Spotify 1.3.8.620).
