@@ -1,6 +1,19 @@
 # Myspoti unter Windows installieren
 
-**Für Tester.** Ein einfacher Setup-Assistent ist in Arbeit. Aktuell gibt es noch keine fertige Myspoti-Setup.exe und keine unabhängige Desktop-App.
+## Einfacher Weg: Setup-Vorschau
+
+1. [Myspoti-Setup.exe herunterladen](https://github.com/weikiboy-tech/myspoti-desktop/releases/tag/v0.1.0-preview.1).
+2. EXE öffnen und **Nur prüfen** wählen.
+3. Den Hinweis zu lokaler Sicherung, UI-Änderung und Spotify-Neustart bestätigen, dann **Myspoti installieren**.
+4. Danach über das Myspoti-Symbol auf dem Desktop starten. Mit deinem eigenen Konto im offiziellen Spotify-Client anmelden.
+
+![Myspoti Setup unter Windows](screenshots/windows-setup-preview.png)
+
+Der Installer lädt Spicetify 2.46.4 von dessen offiziellem GitHub-Release und prüft eine fest hinterlegte SHA-256-Prüfsumme. Er sichert vorhandene Konfiguration und Myspoti-Dateien lokal, aktiviert die Oberfläche und legt die Verknüpfungen an. Node.js und PowerShell-Befehle sind dafür nicht nötig.
+
+**Vorschau, nicht allgemein freigegeben:** Windows x64 und die lokal getestete Spotify-Version 1.3.8.620 sind erforderlich. Andere Versionen werden ohne Client-Änderung abgewiesen. Spotify muss selbst installiert und einmal gestartet worden sein; der Link im Setup führt zum offiziellen Download. Die Store-Version ist nicht unterstützt. Die EXE ist noch nicht digital signiert. Ein Test auf einem vollständig frischen PC steht aus. Es ist weiterhin keine unabhängige Musik-App.
+
+Die folgenden Schritte sind die manuelle Alternative für Entwickler.
 
 ## Voraussetzungen
 

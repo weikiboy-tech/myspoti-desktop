@@ -3,7 +3,7 @@
 <p align="center">Deine Musik. Zwei Looks. Ein eigener Desktop-Einstieg.</p>
 <p align="center"><a href="docs/INSTALL.md"><b>Installation</b></a> · <a href="docs/STATUS.md">Funktionen & Stand</a> · <a href="CONTRIBUTING.md">Mitentwickeln</a> · <a href="https://github.com/weikiboy-tech/myspoti-desktop/issues">Fehler melden</a></p>
 
-> **Entwicklungsversion.** Myspoti läuft derzeit als eigene Oberfläche im Spotify-Desktop-Client. Es ist noch keine unabhängige Musik-App. Ein einfacher Windows-Installer ist in Arbeit; einen fertigen EXE-Download gibt es noch nicht.
+> **Entwicklungsversion.** Myspoti läuft derzeit als eigene Oberfläche im Spotify-Desktop-Client. Es ist noch keine unabhängige Musik-App. Eine kleine Setup-EXE ist als experimentelle Vorschau verfügbar (Windows x64, Spotify 1.3.8.620).
 
 ![Immersive-Ansicht mit künstlichen Testdaten](docs/screenshots/desktop-immersive-preview.png)
 *Vorschau aus dem Browser-Test mit künstlichem Player, ohne echtes Spotify-Konto. Kein Nachweis vollständiger Funktionsparität.*
@@ -19,7 +19,7 @@ Welche Funktionen im echten Client geprüft wurden und welche nur automatisiert:
 
 ### Installieren
 
-Aktuell richtet sich die Installation an Tester mit Windows, Spotify und Spicetify. Folge der **[Installationsanleitung](docs/INSTALL.md)**. Der geplante Setup-Assistent soll diese Schritte übernehmen.
+**[Myspoti Setup herunterladen](https://github.com/weikiboy-tech/myspoti-desktop/releases/tag/v0.1.0-preview.1)** → EXE öffnen → Voraussetzungen prüfen → installieren. Spotify muss bereits installiert sein; Spicetify wird automatisch aus der offiziellen Quelle bezogen. [Anleitung und Grenzen](docs/INSTALL.md).
 
 **Dein Konto bleibt deins:** Dieses Repository enthält keine Spotify-Anmeldedaten, Benutzerprofile oder Spotify-Binärdateien. Jeder Nutzer installiert Spotify selbst und nutzt sein eigenes Konto. Myspoti liefert keinen Premium-Zugang mit.
 

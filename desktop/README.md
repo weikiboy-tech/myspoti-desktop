@@ -27,3 +27,15 @@ Siehe [Paritätsmatrix](../docs/FEATURE_PARITY_MATRIX.md), [Architektur](../docs
 Nach Build und Spicetify-Installation erstellt `./tools/install-shortcut.ps1` unter Windows eine Verknüpfung **Myspoti** auf dem Desktop und im Startmenü, mit dem Myspoti-Logo. Sie öffnet `spotify:app:myspoti-desktop` im vorhandenen Client. Zusätzlich öffnet das Hintergrundskript Myspoti einmal pro Clientstart, sobald die Navigation bereit ist. Der erneute Start über die Verknüpfung wurde im echten Client geprüft. Dies ist ein Desktop-Einstieg, keine eigenständige Spotify-freie EXE. Prozess, Betriebssystem-App-Identität und native Spotify-Bereiche bleiben Bestandteile des offiziellen Clients. Myspoti heißt nicht „Spotify Premium“ und schaltet keine Aborechte frei.
 
 Die Veröffentlichung enthält nur Quellcode und eigene statische App-Dateien. Keine Spotify-Binärdateien, Backups, Benutzerprofile, Cookies, Tokens oder lokale Sitzungen werden mitgeliefert. Jeder Nutzer installiert Spotify selbst und meldet sich mit seinem eigenen Konto an. Der Starter kopiert ausschließlich das Logo; er liest keine Kontodaten. Die lokale Anmeldung des Entwicklers bleibt ausschließlich in dessen Spotify-Installation.
+## Windows-Setup bauen
+
+Auf Windows mit dem .NET-Framework-Compiler (Framework64/v4.0.30319/csc.exe):
+
+```powershell
+./tools/build-installer.ps1
+./tools/test-installer.ps1
+```
+
+Ausgabe: `dist/installer/Myspoti-Setup.exe`, eine kleine x64-WinForms-EXE mit eingebetteten Myspoti-Dateien. Der Installer selbst benötigt kein Node.js und führt keine PowerShell-Skripte aus. Quellcode: `installer/Setup.cs` und `installer/Installer.cs`. Das Paket wird aus einer festen Dateiliste gebaut; niemals aus einem Spotify-Profil oder einem gesamten Arbeitsverzeichnis. `SOURCES.txt` nennt den exakten Git-Commit. Für veröffentlichte Builds muss der Quellstand vorher committed und auf GitHub verfügbar sein.
+
+`Myspoti-Setup.exe --check` prüft nur die lokale Voraussetzung. Tests decken Versionsgrenzen, beschädigte Downloads und passende/falsche/fehlende Sicherungen ab. Die Live-Installation wurde auf dem vorhandenen Entwickler-PC ausgeführt; frische Installation, andere Versionen und ein provozierter Apply-Fehler/Rollback sind noch nicht live abgenommen. Die EXE ist nicht signiert.

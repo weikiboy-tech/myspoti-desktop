@@ -23,6 +23,11 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm test
       - run: npm run build
+      - name: Build setup and test version / download validation
+        shell: pwsh
+        run: |
+          ./tools/build-installer.ps1
+          ./tools/test-installer.ps1
       - name: Browser integration tests (artificial Spotify host)
         shell: pwsh
         run: |

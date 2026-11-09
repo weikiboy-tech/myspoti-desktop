@@ -10,7 +10,7 @@ Stand: 9. November 2026. Entwicklungsversion, keine vollständige Android-Portie
 | Classic/Immersive und gespeicherte Darstellung | Browser-Test bestanden; Live-Abnahme offen |
 | Lokaler LRC-Import und zeilenweises Seek | Logik-/Browser-Tests bestanden |
 | Sleep Timer | Logik-/Browser-Tests bestanden; echter Ablauf noch offen |
-| Einfacher EXE-Installer | In Arbeit; noch kein Download |
+| EXE-Installer (Vorschau) | Versionsprüfung und Installation auf vorhandenem Windows-x64-Setup live bestanden; frischer PC noch offen |
 | Unabhängige Desktop-App | Noch nicht umgesetzt; Spotify bleibt Voraussetzung |
 | AutoMix, Equalizer, eigener Offline-Player, Videos | Noch nicht umgesetzt |
 | Vollständige Android-Ansichten, Wort-Lyrics, Extension-Sandbox | Noch nicht umgesetzt |
