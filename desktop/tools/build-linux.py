@@ -3,18 +3,24 @@
 """Build .deb and portable tar.gz from an explicit, account-free file list."""
 import gzip
 import io
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import subprocess
 import tarfile
 
 ROOT = Path(__file__).resolve().parents[1]
 REPO = ROOT.parent
-VERSION = '0.2.0~preview.1'
+VERSION = '0.2.0~preview.2'
 OUT = ROOT / 'dist/linux'
 
 def tar_bytes(files):
     output = io.BytesIO()
     with tarfile.open(fileobj=output, mode='w') as archive:
+        directories = {str(parent) for name in files for parent in PurePosixPath(name).parents if str(parent) != '.'}
+        for name in sorted(directories, key=lambda item: (item.count('/'), item)):
+            info = tarfile.TarInfo(name + '/')
+            info.type = tarfile.DIRTYPE; info.mode = 0o755; info.uid = info.gid = 0
+            info.uname = info.gname = 'root'; info.mtime = 0
+            archive.addfile(info)
         for name, (data, mode) in sorted(files.items()):
             info = tarfile.TarInfo(name)
             info.size = len(data); info.mode = mode; info.uid = info.gid = 0

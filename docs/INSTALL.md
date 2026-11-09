@@ -2,7 +2,7 @@
 
 ## Einfacher Weg: Setup-Vorschau
 
-1. [Myspoti-Setup.exe herunterladen](https://github.com/weikiboy-tech/myspoti-desktop/releases/tag/v0.2.0-preview.1).
+1. [Myspoti-Setup.exe herunterladen](https://github.com/weikiboy-tech/myspoti-desktop/releases/tag/v0.2.0-preview.2).
 2. EXE öffnen und **Nur prüfen** wählen.
 3. Den Hinweis zu lokaler Sicherung, UI-Änderung und Spotify-Neustart bestätigen, dann **Myspoti installieren**.
 4. Danach über das Myspoti-Symbol auf dem Desktop starten. Mit deinem eigenen Konto im offiziellen Spotify-Client anmelden.

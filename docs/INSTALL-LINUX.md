@@ -2,7 +2,7 @@
 
 ## Ubuntu / Debian (x86_64)
 
-1. **[Myspoti-Linux-Setup.deb herunterladen](https://github.com/weikiboy-tech/myspoti-desktop/releases/download/v0.2.0-preview.1/Myspoti-Linux-Setup.deb)**.
+1. **[Myspoti-Linux-Setup.deb herunterladen](https://github.com/weikiboy-tech/myspoti-desktop/releases/download/v0.2.0-preview.2/Myspoti-Linux-Setup.deb)**.
 2. Das Paket mit der Softwareverwaltung öffnen und installieren. Alternativ: `sudo apt install ./Myspoti-Linux-Setup.deb` im Download-Ordner.
 3. **Myspoti Setup** im Anwendungsmenü öffnen, **Nur prüfen** wählen.
 4. Spotify vollständig schließen, den Einrichtungshinweis bestätigen und **Myspoti installieren** wählen.
@@ -29,7 +29,7 @@ Vorhandene lokale Myspoti-Generationen bleiben für Rückgriff erhalten. Ein feh
 
 ## Andere native Linux-Distributionen
 
-[Portables Setup-Archiv](https://github.com/weikiboy-tech/myspoti-desktop/releases/download/v0.2.0-preview.1/Myspoti-Linux-Setup.tar.gz) entpacken. Mit installiertem Python >=3.10, Tk und `pgrep` im entpackten Ordner `python3 setup.py` starten. `python3 setup.py --check` prüft ohne Änderungen; `python3 setup.py --install` bietet einen Terminalablauf mit Bestätigung. Die gleichen Versions- und Paketgrenzen gelten.
+[Portables Setup-Archiv](https://github.com/weikiboy-tech/myspoti-desktop/releases/download/v0.2.0-preview.2/Myspoti-Linux-Setup.tar.gz) entpacken. Mit installiertem Python >=3.10, Tk und `pgrep` im entpackten Ordner `python3 setup.py` starten. `python3 setup.py --check` prüft ohne Änderungen; `python3 setup.py --install` bietet einen Terminalablauf mit Bestätigung. Die gleichen Versions- und Paketgrenzen gelten.
 
 ## Entfernen
 

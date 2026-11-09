@@ -1,7 +1,7 @@
 <p align="center"><img src="docs/brand/myspoti-logo-256.png" width="88" alt="Myspoti"></p>
 <h1 align="center">Myspoti für Windows & Linux</h1>
 <p align="center">Deine Musik. Zwei Looks. Ein eigener Desktop-Einstieg.</p>
-<p align="center"><a href="https://github.com/weikiboy-tech/myspoti-desktop/releases/download/v0.2.0-preview.1/Myspoti-Setup.exe"><b>⬇ Windows-Installer herunterladen (.exe)</b></a><br><a href="https://github.com/weikiboy-tech/myspoti-desktop/releases/download/v0.2.0-preview.1/Myspoti-Linux-Setup.deb"><b>⬇ Linux-Installer herunterladen (.deb)</b></a><br><sub>Vorschau · Windows x64 / Linux x86_64 · <a href="docs/STATUS.md">Kompatibilität prüfen</a></sub></p>
+<p align="center"><a href="https://github.com/weikiboy-tech/myspoti-desktop/releases/download/v0.2.0-preview.2/Myspoti-Setup.exe"><b>⬇ Windows-Installer herunterladen (.exe)</b></a><br><a href="https://github.com/weikiboy-tech/myspoti-desktop/releases/download/v0.2.0-preview.2/Myspoti-Linux-Setup.deb"><b>⬇ Linux-Installer herunterladen (.deb)</b></a><br><sub>Vorschau · Windows x64 / Linux x86_64 · <a href="docs/STATUS.md">Kompatibilität prüfen</a></sub></p>
 <p align="center"><a href="docs/INSTALL.md"><b>Installation</b></a> · <a href="docs/STATUS.md">Funktionen & Stand</a> · <a href="CONTRIBUTING.md">Mitentwickeln</a> · <a href="https://github.com/weikiboy-tech/myspoti-desktop/issues">Fehler melden</a></p>
 
 > **Entwicklungsversion.** Myspoti läuft derzeit als eigene Oberfläche im Spotify-Desktop-Client. Es ist noch keine unabhängige Musik-App. Setup-Downloads für Windows und Linux sind als experimentelle Vorschau verfügbar. Unterstützte Spotify-Versionen und Linux-Paketarten stehen in den Anleitungen.
@@ -20,7 +20,7 @@ Welche Funktionen im echten Client geprüft wurden und welche nur automatisiert:
 
 ### Installieren
 
-**[Alle Downloads in Releases](https://github.com/weikiboy-tech/myspoti-desktop/releases/tag/v0.2.0-preview.1)** · [Windows-Anleitung](docs/INSTALL.md) · [Linux-Anleitung](docs/INSTALL-LINUX.md). Spotify muss bereits installiert sein; Spicetify wird aus offizieller Quelle bezogen und per SHA-256 geprüft. Unter Linux gibt es ein grafisches Debian-/Ubuntu-Paket sowie ein portables Archiv. Snap, Flatpak, Nix und ARM sind noch nicht unterstützt.
+**[Alle Downloads in Releases](https://github.com/weikiboy-tech/myspoti-desktop/releases/tag/v0.2.0-preview.2)** · [Windows-Anleitung](docs/INSTALL.md) · [Linux-Anleitung](docs/INSTALL-LINUX.md). Spotify muss bereits installiert sein; Spicetify wird aus offizieller Quelle bezogen und per SHA-256 geprüft. Unter Linux gibt es ein grafisches Debian-/Ubuntu-Paket sowie ein portables Archiv. Snap, Flatpak, Nix und ARM sind noch nicht unterstützt.
 
 **Dein Konto bleibt deins:** Dieses Repository enthält keine Spotify-Anmeldedaten, Benutzerprofile oder Spotify-Binärdateien. Jeder Nutzer installiert Spotify selbst und nutzt sein eigenes Konto. Myspoti liefert keinen Premium-Zugang mit.
 
