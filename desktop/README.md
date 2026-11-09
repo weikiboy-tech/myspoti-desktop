@@ -2,7 +2,7 @@
 
 GPL-3.0, abgeleitet von [Myspoti](https://github.com/kota-zo/myspoti). Vollständige Originalquellen und Drittanbieterhinweise liegen im übergeordneten Repository.
 
-**Noch keine abgenommene Desktop-Version.** Das Paket ist gebaut und der Adapter mit künstlichem Host getestet; das Laden in Spotify und tatsächliche Wiedergabe müssen erst nach der Installation geprüft werden.
+**Noch keine vollständige Desktop-Version.** Laden, Titel/Cover, Play/Pause, Seek und LRCLIB wurden im echten Client geprüft. Weitere Funktionen sind noch offen; siehe Funktionsabnahme.
 
 ```powershell
 cd desktop
@@ -16,8 +16,14 @@ Vorbereitung, Installation und Rückbau: [Installationsplan](../docs/DESKTOP_INS
 
 Enthalten: Player-Adapter, Basis-Steuerung, native Navigationslinks/Suchübergabe, zwei Darstellungsmodi, Akzent-/AMOLED-/Animations-Einstellungen, LRC-Import mit zeilenweisem Seek, manueller LRCLIB-Abruf sowie Sleep Timer. Nicht enthalten: vollständige Android-Ansichten, Worttiming, weitere Online-Lyrics-Provider, AutoMix, Audio-DSP, Videos, Extension-Sandbox, eigener Offline-Player und die meisten zusätzlichen Funktionen.
 
-Die Custom-App wurde lokal mit Spicetify 2.46.4 installiert. Öffnen über den Myspoti-Eintrag bzw. im Spotify-Profilmenü „Myspoti Desktop“. Der Menüeintrag wird vom mitgelieferten Hintergrundskript registriert. Laden und Wiedergabe im tatsächlichen Client sind weiterhin offen. Spotify 1.3.8.620 liegt über der angegebenen Spicetify-Kompatibilität bis 1.3.7; deshalb kein stabiler Release.
+Die Custom-App wurde lokal mit Spicetify 2.46.4 installiert. Öffnen über den Myspoti-Eintrag bzw. im Spotify-Profilmenü „Myspoti“. Der Menüeintrag wird vom mitgelieferten Hintergrundskript registriert. Laden und Basis-Wiedergabe wurden im tatsächlichen Client geprüft. Spotify 1.3.8.620 liegt über der angegebenen Spicetify-Kompatibilität bis 1.3.7; deshalb kein stabiler Release.
 
 Nur die Browser-Tests benötigen `npm ci --ignore-scripts` und einen vorhandenen Chromium-Browser (Pfad in `MYSPOTI_TEST_BROWSER`). Die npm-Pakete sind reine Entwicklungsabhängigkeiten; der Produktionsbuild verwendet Spotifys React. Ausführen: `npm run test:browser`.
 
 Siehe [Paritätsmatrix](../docs/FEATURE_PARITY_MATRIX.md), [Architektur](../docs/ARCHITECTURE_DECISION.md) und [Testbericht](../docs/DESKTOP_TEST_REPORT.md). Ein Paket ohne den zugehörigen Quellcode und Lizenzhinweise nicht weitergeben.
+
+## Desktop-Einstieg und Anmeldung
+
+Nach Build und Spicetify-Installation erstellt `./tools/install-shortcut.ps1` unter Windows eine Verknüpfung **Myspoti** auf dem Desktop und im Startmenü, mit dem Myspoti-Logo. Sie öffnet `spotify:app:myspoti-desktop` im vorhandenen Client. Dies ist ein Desktop-Einstieg, keine eigenständige Spotify-freie EXE. Prozess, Betriebssystem-App-Identität und native Spotify-Bereiche bleiben Bestandteile des offiziellen Clients. Myspoti heißt nicht „Spotify Premium“ und schaltet keine Aborechte frei.
+
+Die Veröffentlichung enthält nur Quellcode und eigene statische App-Dateien. Keine Spotify-Binärdateien, Backups, Benutzerprofile, Cookies, Tokens oder lokale Sitzungen werden mitgeliefert. Jeder Nutzer installiert Spotify selbst und meldet sich mit seinem eigenen Konto an. Der Starter kopiert ausschließlich das Logo; er liest keine Kontodaten. Die lokale Anmeldung des Entwicklers bleibt ausschließlich in dessen Spotify-Installation.

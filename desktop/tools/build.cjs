@@ -10,7 +10,15 @@ for (const name of ['core.js', 'app.js', 'background.js']) new vm.Script(read(na
 fs.writeFileSync(path.join(out, 'index.js'), read('core.js') + '\n' + read('app.js'));
 fs.writeFileSync(path.join(out, 'myspoti-runtime.js'), read('core.js') + '\n' + read('background.js'));
 fs.copyFileSync(path.join(root, 'src', 'style.css'), path.join(out, 'style.css'));
-const icon = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M4 5h4l4 8 4-8h4v14h-4v-7l-4 7-4-7v7H4z"/></svg>';
-fs.writeFileSync(path.join(out, 'manifest.json'), JSON.stringify({ name: 'Myspoti Desktop', icon, 'active-icon': icon, subfiles_extension: ['myspoti-runtime.js'] }, null, 2));
+const brand = path.join(root, '..', 'docs', 'brand');
+const icon = fs.readFileSync(path.join(brand, 'myspoti-logo.svg'), 'utf8');
+fs.writeFileSync(path.join(out, 'manifest.json'), JSON.stringify({ name: 'Myspoti', icon, 'active-icon': icon, subfiles_extension: ['myspoti-runtime.js'] }, null, 2));
+// Windows ICO supports a PNG image payload (0 dimensions denote 256 pixels).
+const png = fs.readFileSync(path.join(brand, 'myspoti-logo-256.png'));
+const ico = Buffer.alloc(22);
+ico.writeUInt16LE(1, 2); ico.writeUInt16LE(1, 4);
+ico.writeUInt16LE(1, 10); ico.writeUInt16LE(32, 12);
+ico.writeUInt32LE(png.length, 14); ico.writeUInt32LE(22, 18);
+fs.writeFileSync(path.join(out, 'myspoti.ico'), Buffer.concat([ico, png]));
 for (const name of ['LICENSE', 'THIRD_PARTY_NOTICES.md']) fs.copyFileSync(path.join(root, '..', name), path.join(out, name));
 console.log('Spicetify-Paket erstellt: ' + out);

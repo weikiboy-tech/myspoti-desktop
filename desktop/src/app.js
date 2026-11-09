@@ -91,7 +91,7 @@ function MyspotiDesktopApp() {
     h('p', null, 'Vorabversion: AutoMix, externe Lyrics-Provider, Video- und Erweiterungssystem sind noch nicht portiert.'),
     h('p', null, 'Myspoti Desktop · GPL-3.0 · Ursprung: kota-zo/myspoti. Immersive-Design mit Herkunft aus BitChord.'));
   return h('main', { ref: panel, className: `msp-desktop ${settings.mode}${settings.amoled ? ' amoled' : ''}${settings.reduceMotion ? ' reduce-motion' : ''}`, style: { '--msp-accent': settings.accent || (settings.mode === 'immersive' ? '#ff4f7b' : '#1db954') } },
-    h('header', null, h('div', null, h('p', { className: 'msp-eyebrow' }, 'DEIN SPOTIFY. DEIN MOMENT.'), h('h1', null, 'Myspoti Desktop')),
+    h('header', null, h('div', null, h('p', { className: 'msp-eyebrow' }, 'DEIN SPOTIFY. DEIN MOMENT.'), h('h1', null, 'Myspoti')),
       h('div', { className: 'msp-controls' }, button(settings.mode === 'classic' ? 'Immersive' : 'Classic', () => update({ mode: settings.mode === 'classic' ? 'immersive' : 'classic' })),
         button('Vollbild', () => document.fullscreenElement ? document.exitFullscreen() : panel.current.requestFullscreen(), !document.fullscreenEnabled))),
     navigation, search, error && h('p', { role: 'alert', className: 'msp-error' }, error), tab === 'settings' ? preferences : player);

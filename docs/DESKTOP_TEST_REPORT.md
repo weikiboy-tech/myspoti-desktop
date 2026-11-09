@@ -2,6 +2,10 @@
 
 **Gesamtauftrag nicht abgeschlossen.** Früher ausführbarer Spicetify-Prototyp, keine vollständige Android-Portierung.
 
+## Fortsetzung: echte Spotify-Tests
+
+Nach erneuter Freigabe und Zurücksetzen der Computer-Use-Sitzung gelang die Steuerung. Die Custom-App wurde über das M-Symbol geöffnet. Titel/Cover, Play/Pause mit fortlaufender Zeit, Seek und LRCLIB-Abruf wurden im echten Client beobachtet. Einzelne Testschritte stehen in [DESKTOP_ACCEPTANCE.md](DESKTOP_ACCEPTANCE.md). Die nachfolgenden Abschnitte enthalten außerdem die historische erste Testphase; deren Aussage „Myspoti noch nicht geöffnet“ ist durch diese Fortsetzung überholt.
+
 ## Ausgeführt
 
 - `npm test`: **15 Tests bestanden**, 0 Fehler. Adapter, fehlende Sitzung, snake_case-/camelCase-Restriktionen, Werbezustand, Wertebereiche, Ereignisbereinigung, LRC, korrupte Einstellungen, Sleep Timer, Lyrics-Cache, Aufnahmeabgleich, Netzwerkfehler, Rate-Limits und Parallelität.

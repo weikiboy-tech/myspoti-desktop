@@ -1,3 +1,19 @@
+# Myspoti – Desktop-Integration (in Arbeit)
+
+<img src="docs/brand/myspoti-logo-256.png" width="96" alt="Myspoti Logo">
+
+GPL-3.0-Portierungsprojekt auf Basis von [kota-zo/myspoti](https://github.com/kota-zo/myspoti). Originalquellen, Urheber- und Lizenzhinweise bleiben erhalten.
+
+Der aktuelle Desktop-Stand ist eine **Spicetify-Custom-App mit Windows-Desktop-Einstieg**, noch keine vollständige eigenständige App. Echte Basis-Wiedergabe und Lyrics-Abruf wurden getestet; die vollständige Android-Funktionsparität ist noch nicht erreicht.
+
+- [Installation, Desktop-Symbol und Kontotrennung](desktop/README.md)
+- [Nachprüfbare Funktionsabnahme](docs/DESKTOP_ACCEPTANCE.md)
+- [Funktionsparität und offene Arbeit](docs/FEATURE_PARITY_MATRIX.md)
+- [Tests und Einschränkungen](docs/DESKTOP_TEST_REPORT.md)
+
+**Keine Spotify-Anmeldedaten oder Spotify-Binärdateien enthalten.** Jeder Nutzer verwendet seine eigene lokal installierte Spotify-App und sein eigenes Konto. Kein Premium-Zugang wird mitgeliefert oder freigeschaltet. Die folgenden Originalangaben betreffen das Android-Upstream-Projekt und sind keine Zusage für die Desktop-Portierung.
+
+---
 # Myspoti
 
 [![Latest release](https://img.shields.io/github/v/release/kota-zo/myspoti?label=release)](https://github.com/kota-zo/myspoti/releases/latest)
