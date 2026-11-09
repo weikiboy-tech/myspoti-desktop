@@ -2,7 +2,7 @@
 
 ## Einfacher Weg: Setup-Vorschau
 
-1. [Myspoti-Setup.exe herunterladen](https://github.com/weikiboy-tech/myspoti-desktop/releases/tag/v0.1.0-preview.1).
+1. [Myspoti-Setup.exe herunterladen](https://github.com/weikiboy-tech/myspoti-desktop/releases/tag/v0.2.0-preview.1).
 2. EXE öffnen und **Nur prüfen** wählen.
 3. Den Hinweis zu lokaler Sicherung, UI-Änderung und Spotify-Neustart bestätigen, dann **Myspoti installieren**.
 4. Danach über das Myspoti-Symbol auf dem Desktop starten. Mit deinem eigenen Konto im offiziellen Spotify-Client anmelden.
@@ -62,3 +62,5 @@ Anschließend die Myspoti-Verknüpfungen auf Desktop und im Startmenü entfernen
 ## Probleme melden
 
 [Issue öffnen](https://github.com/weikiboy-tech/myspoti-desktop/issues/new/choose) und Windows-, Spotify- und Spicetify-Version sowie die konkreten Schritte nennen. Keine Cookies, Tokens, Kontoexporte oder vollständigen Benutzerprofile hochladen.
+
+Linux gesucht? [Zur Linux-Installation](INSTALL-LINUX.md).

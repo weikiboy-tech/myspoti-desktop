@@ -39,3 +39,14 @@ Auf Windows mit dem .NET-Framework-Compiler (Framework64/v4.0.30319/csc.exe):
 Ausgabe: `dist/installer/Myspoti-Setup.exe`, eine kleine x64-WinForms-EXE mit eingebetteten Myspoti-Dateien. Der Installer selbst benötigt kein Node.js und führt keine PowerShell-Skripte aus. Quellcode: `installer/Setup.cs` und `installer/Installer.cs`. Das Paket wird aus einer festen Dateiliste gebaut; niemals aus einem Spotify-Profil oder einem gesamten Arbeitsverzeichnis. `SOURCES.txt` nennt den exakten Git-Commit. Für veröffentlichte Builds muss der Quellstand vorher committed und auf GitHub verfügbar sein.
 
 `Myspoti-Setup.exe --check` prüft nur die lokale Voraussetzung. Tests decken Versionsgrenzen, beschädigte Downloads und passende/falsche/fehlende Sicherungen ab. Die Live-Installation wurde auf dem vorhandenen Entwickler-PC ausgeführt; frische Installation, andere Versionen und ein provozierter Apply-Fehler/Rollback sind noch nicht live abgenommen. Die EXE ist nicht signiert.
+
+## Linux-Setup bauen und testen
+
+```sh
+python3 tools/build-linux.py
+python3 -m unittest discover -s installer/linux -p 'test_*.py' -v
+```
+
+Ausgabe: `dist/linux/Myspoti-Linux-Setup.deb` und `Myspoti-Linux-Setup.tar.gz`. Der Builder funktioniert auch unter Windows; Debian-Paketinstallation und Tk-GUI werden auf Ubuntu-CI geprüft. Die Oberfläche in `src/` ist für beide Systeme identisch. Systemabhängige Einrichtung bleibt getrennt in `installer/Setup.cs` / `Installer.cs` und `installer/linux/setup.py`.
+
+Linux-Setup benötigt Python >=3.10 mit Tk und procps; das Debian-Paket deklariert diese Abhängigkeiten. Weitere Details und nicht unterstützte Paketarten: [Linux-Anleitung](../docs/INSTALL-LINUX.md).

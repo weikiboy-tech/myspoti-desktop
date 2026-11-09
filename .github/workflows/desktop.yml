@@ -2,6 +2,7 @@ name: Desktop checks
 on:
   push:
     branches: [main]
+    tags: ['v*']
     paths: ['desktop/**', 'docs/brand/**', '.github/workflows/desktop.yml']
   pull_request:
     paths: ['desktop/**', 'docs/brand/**', '.github/workflows/desktop.yml']
@@ -34,3 +35,77 @@ jobs:
           $env:MYSPOTI_TEST_BROWSER = Join-Path ${env:ProgramFiles} 'Google\Chrome\Application\chrome.exe'
           if (!(Test-Path -LiteralPath $env:MYSPOTI_TEST_BROWSER)) { throw 'Chrome missing from runner' }
           npm run test:browser
+      - uses: actions/upload-artifact@v7
+        with:
+          name: windows-installer
+          path: desktop/dist/installer/Myspoti-Setup.exe
+          if-no-files-found: error
+  linux:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: desktop
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - run: npm ci --ignore-scripts
+      - run: npm test
+      - run: npm run build
+      - name: Linux browser integration (artificial Spotify host)
+        run: MYSPOTI_TEST_BROWSER=/usr/bin/google-chrome npm run test:browser
+      - name: Installer tests and packages
+        run: |
+          python3 -m unittest discover -s installer/linux -p 'test_*.py' -v
+          python3 tools/build-linux.py
+      - name: Validate and install the Debian package
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y python3-tk xvfb desktop-file-utils
+          dpkg-deb --info dist/linux/Myspoti-Linux-Setup.deb
+          sudo dpkg -i dist/linux/Myspoti-Linux-Setup.deb
+          desktop-file-validate /usr/share/applications/myspoti-setup.desktop
+          MYSPOTI_GUI_SMOKE=1 xvfb-run -a myspoti-setup
+      - name: Verify official Linux Spicetify executable
+        run: |
+          python3 - <<'PY'
+          import sys, pathlib, urllib.request, subprocess
+          sys.path.insert(0, 'installer/linux')
+          import setup
+          target = pathlib.Path('dist/linux-tool-check')
+          target.mkdir(exist_ok=True)
+          archive = target / 'tool.tar.gz'
+          urllib.request.urlretrieve(setup.SPICE_URL, archive)
+          setup.verify_download(archive)
+          setup.extract_tool(archive, target)
+          subprocess.run([str(target / 'spicetify'), '--version'], check=True)
+          PY
+      - uses: actions/upload-artifact@v7
+        with:
+          name: linux-installer
+          path: |
+            desktop/dist/linux/Myspoti-Linux-Setup.deb
+            desktop/dist/linux/Myspoti-Linux-Setup.tar.gz
+          if-no-files-found: error
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [test, linux]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: '*-installer'
+          path: release-assets
+          merge-multiple: true
+      - name: Publish tested preview installers
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd release-assets
+          sha256sum Myspoti-Setup.exe Myspoti-Linux-Setup.deb Myspoti-Linux-Setup.tar.gz > SHA256SUMS.txt
+          gh release create "$GITHUB_REF_NAME" ./* --prerelease --title 'Myspoti · Windows & Linux · Setup-Vorschau 0.2.0' --notes-file ../docs/RELEASE-0.2.md

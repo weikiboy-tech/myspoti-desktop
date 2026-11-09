@@ -1,10 +1,10 @@
 <p align="center"><img src="docs/brand/myspoti-logo-256.png" width="88" alt="Myspoti"></p>
-<h1 align="center">Myspoti für Windows</h1>
+<h1 align="center">Myspoti für Windows & Linux</h1>
 <p align="center">Deine Musik. Zwei Looks. Ein eigener Desktop-Einstieg.</p>
-<p align="center"><a href="https://github.com/weikiboy-tech/myspoti-desktop/releases/download/v0.1.0-preview.1/Myspoti-Setup.exe"><b>⬇ Windows-Installer herunterladen (.exe)</b></a><br><sub>Vorschau · Windows x64 · Spotify 1.3.8.620</sub></p>
+<p align="center"><a href="https://github.com/weikiboy-tech/myspoti-desktop/releases/download/v0.2.0-preview.1/Myspoti-Setup.exe"><b>⬇ Windows-Installer herunterladen (.exe)</b></a><br><a href="https://github.com/weikiboy-tech/myspoti-desktop/releases/download/v0.2.0-preview.1/Myspoti-Linux-Setup.deb"><b>⬇ Linux-Installer herunterladen (.deb)</b></a><br><sub>Vorschau · Windows x64 / Linux x86_64 · <a href="docs/STATUS.md">Kompatibilität prüfen</a></sub></p>
 <p align="center"><a href="docs/INSTALL.md"><b>Installation</b></a> · <a href="docs/STATUS.md">Funktionen & Stand</a> · <a href="CONTRIBUTING.md">Mitentwickeln</a> · <a href="https://github.com/weikiboy-tech/myspoti-desktop/issues">Fehler melden</a></p>
 
-> **Entwicklungsversion.** Myspoti läuft derzeit als eigene Oberfläche im Spotify-Desktop-Client. Es ist noch keine unabhängige Musik-App. Eine kleine Setup-EXE ist als experimentelle Vorschau verfügbar (Windows x64, Spotify 1.3.8.620).
+> **Entwicklungsversion.** Myspoti läuft derzeit als eigene Oberfläche im Spotify-Desktop-Client. Es ist noch keine unabhängige Musik-App. Setup-Downloads für Windows und Linux sind als experimentelle Vorschau verfügbar. Unterstützte Spotify-Versionen und Linux-Paketarten stehen in den Anleitungen.
 
 ![Immersive-Ansicht mit künstlichen Testdaten](docs/screenshots/desktop-immersive-preview.png)
 *Vorschau aus dem Browser-Test mit künstlichem Player, ohne echtes Spotify-Konto. Kein Nachweis vollständiger Funktionsparität.*
@@ -14,13 +14,13 @@
 - **Classic & Immersive:** zwei Ansichten mit Akzentfarbe, AMOLED-Option und reduzierter Bewegung.
 - **Player:** Titel, Cover und Wiedergabesteuerung über den installierten Spotify-Client.
 - **Songtexte:** eigene LRC-Dateien oder manueller LRCLIB-Abruf, mit zeilenweiser Navigation.
-- **Desktop-Einstieg:** Myspoti-Symbol auf dem Desktop und im Startmenü; Myspoti öffnet sich beim Clientstart.
+- **Desktop-Einstieg:** Myspoti-Symbol unter Windows auf Desktop/Startmenü, unter Linux im Anwendungsmenü.
 
 Welche Funktionen im echten Client geprüft wurden und welche nur automatisiert: **[aktueller Stand](docs/STATUS.md)**.
 
 ### Installieren
 
-**[Myspoti Setup herunterladen](https://github.com/weikiboy-tech/myspoti-desktop/releases/tag/v0.1.0-preview.1)** → EXE öffnen → Voraussetzungen prüfen → installieren. Spotify muss bereits installiert sein; Spicetify wird automatisch aus der offiziellen Quelle bezogen. [Anleitung und Grenzen](docs/INSTALL.md).
+**[Alle Downloads in Releases](https://github.com/weikiboy-tech/myspoti-desktop/releases/tag/v0.2.0-preview.1)** · [Windows-Anleitung](docs/INSTALL.md) · [Linux-Anleitung](docs/INSTALL-LINUX.md). Spotify muss bereits installiert sein; Spicetify wird aus offizieller Quelle bezogen und per SHA-256 geprüft. Unter Linux gibt es ein grafisches Debian-/Ubuntu-Paket sowie ein portables Archiv. Snap, Flatpak, Nix und ARM sind noch nicht unterstützt.
 
 **Dein Konto bleibt deins:** Dieses Repository enthält keine Spotify-Anmeldedaten, Benutzerprofile oder Spotify-Binärdateien. Jeder Nutzer installiert Spotify selbst und nutzt sein eigenes Konto. Myspoti liefert keinen Premium-Zugang mit.
 
@@ -28,12 +28,12 @@ Welche Funktionen im echten Client geprüft wurden und welche nur automatisiert:
 
 | Ordner | Inhalt |
 |---|---|
-| [`desktop/`](desktop/) | Aktive Windows-/Spicetify-Entwicklung, Build und Tests |
+| [`desktop/`](desktop/) | Gemeinsame Oberfläche, Windows-/Linux-Installer, Build und Tests |
 | [`docs/`](docs/README.md) | Installation, Status und technische Dokumentation |
 | [`base/`](base/) | Erhaltene Android-Originalquellen als Portierungsgrundlage |
 | [`tools/`](tools/) | Werkzeuge des Android-Upstreams |
 
-Die Android-App ist separat in der **[Original-README](README.android.md)** dokumentiert. Ihre Features sind keine Zusage für Windows.
+Die Android-App ist separat in der **[Original-README](README.android.md)** dokumentiert. Ihre Features sind keine Zusage für die Desktop-Version.
 
 ### Herkunft & Lizenz
 

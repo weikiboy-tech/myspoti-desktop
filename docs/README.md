@@ -1,8 +1,9 @@
 # Dokumentation
 
-## Myspoti für Windows
+## Myspoti für Windows & Linux
 
-- **[Installation](INSTALL.md)** – Voraussetzungen, Einrichtung und Rückbau.
+- **[Windows installieren](INSTALL.md)** – EXE, Voraussetzungen und Rückbau.
+- **[Linux installieren](INSTALL-LINUX.md)** – grafisches .deb, portables Archiv und Kompatibilität.
 - **[Funktionen & Stand](STATUS.md)** – Was funktioniert, wie es geprüft wurde und was fehlt.
 - **[Entwicklung](../desktop/README.md)** – Quellcode, Build und Tests.
 
